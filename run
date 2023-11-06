@@ -306,10 +306,11 @@ function base_package() {
     print_install "Menginstall Packet Yang Dibutuhkan"
     apt install zip pwgen openssl netcat socat cron bash-completion -y
     apt install figlet -y
+    apt install lolcat -y
+    gem install lolcat
     apt update -y
     apt upgrade -y
     apt dist-upgrade -y
-    gem install lolcat
     systemctl enable chronyd
     systemctl restart chronyd
     systemctl enable chrony
@@ -1000,7 +1001,6 @@ clear
     first_setup
     nginx_install
     base_package
-    password_default
     make_folder_xray
     pasang_domain
     pasang_ssl
@@ -1020,6 +1020,7 @@ clear
     menu
     profile
     enable_services
+    password_default
 }
 function password_default() {
 domain=$(cat /etc/xray/domain)
@@ -1043,7 +1044,7 @@ domain=$(cat /etc/xray/domain)
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>
-<b>   AUTOSCRIPT DEVILS TUNNEL  </b>
+   <b>AUTOSCRIPT YOGZ TUNNEL</b>
 <code>────────────────────</code>
 <code>User   : </code><code>$USRSC</code>
 <code>Domain : </code><code>$domain</code>
@@ -1053,10 +1054,10 @@ domain=$(cat /etc/xray/domain)
 <code>Exp Sc : </code><code>$EXPSC</code>
 <code>────────────────────</code>
 <i>Automatic Notification from</i>
-<i>Devils Tunnel</i>
+<i>Yogz Tunnel</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/YSSHstore"},{"text":"GRUP🐬","url":"https://t.me/yogztesti"}]]}'
    
-curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 }
 
@@ -1096,6 +1097,5 @@ echo ""
 echo "SIMPAN DATA VPS DI ATAS" | tee -a log-install.txt
 sudo hostnamectl set-hostname $username
 echo -e "${green} Script Successfull Installed"
-echo "Anda Akan Reboot Selama 5 Detik"
 sleep 5
 reboot
