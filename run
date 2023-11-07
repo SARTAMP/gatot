@@ -1070,7 +1070,6 @@ rm -rf /root/*.sh
 rm -rf /root/LICENSE
 rm -rf /root/README.md
 rm -rf /root/domain
-#sudo hostnamectl set-hostname $user
 secs_to_human "$(($(date +%s) - ${start}))"
 echo ""
 echo -e ""
@@ -1078,25 +1077,26 @@ clear
 echo " 𝗦𝘂𝗰𝗰𝗲𝘀 𝗮𝘁 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝘆" | tee -a log-install.txt
 echo "    𝗩𝗣𝗦 𝗜𝗡𝗙𝗢" | tee -a log-install.txt
 echo "    ◇━━━━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
-echo "    Isp Vps : $ISP" | tee -a log-install.txt
-echo "    Domain     : $domain" | tee -a log-install.txt
-echo "    IP Vps     : $MYIP" | tee -a log-install.txt
-echo "    OS Vps     : $OS_Name" | tee -a log-install.txt
-echo "    User Script: $USRSC" | tee -a log-install.txt
-echo "    Tanggal    : $tanggal" | tee -a log-install.txt
-echo "    Exp Vps : $exp" | tee -a log-install.txt
+echo "    Isp Vps     : $ISP" | tee -a log-install.txt
+echo "    Domain      : $domain" | tee -a log-install.txt
+echo "    IP Vps      : $MYIP" | tee -a log-install.txt
+echo "    OS Vps      : $OS_Name" | tee -a log-install.txt
+echo "    User Script : $USRSC" | tee -a log-install.txt
+echo "    Tanggal     : $tanggal" | tee -a log-install.txt
+echo "    Exp Vps     : $exp" | tee -a log-install.txt
 echo "    ◇━━━━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
-echo "    Hostname   : ${HOSTNAME}" | tee -a log-install.txt
-echo "    Kernel     : $Kernel" | tee -a log-install.txt
-echo "    Arch       : $Arch" | tee -a log-install.txt
+echo "    Hostname    : ${HOSTNAME}" | tee -a log-install.txt
+echo "    Kernel      : $Kernel" | tee -a log-install.txt
+echo "    Arch        : $Arch" | tee -a log-install.txt
 echo "    Ram Total   : $Ram_Total MB" | tee -a log-install.txt
-echo "    Ram Used   : $Ram_Usage MB" | tee -a log-install.txt
-echo "    ============================" | tee -a log-install.txt
-echo "  ⚠︎𝘽𝙮 STVPN 𝙋𝙧𝙤𝙟𝙚𝙘𝙩 𝙈𝙖𝙣𝙖𝙜𝙚𝙧 𝘾𝙤𝙢𝙢𝙪𝙣𝙞𝙩𝙮⚠︎" | tee -a log-install.txt
-echo "    ============================" | tee -a log-install.txt
+echo "    Ram Used    : $Ram_Usage MB" | tee -a log-install.txt
+echo "    ◇━━━━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
+echo "  ⚠︎𝘽𝙮 YogzVPN 𝙋𝙧𝙤𝙟𝙚𝙘𝙩 𝙈𝙖𝙣𝙖𝙜𝙚𝙧 𝘾𝙤𝙢𝙢𝙪𝙣𝙞𝙩𝙮⚠︎" | tee -a log-install.txt
+echo "    ◇━━━━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
 echo ""
 echo "SIMPAN DATA VPS DI ATAS" | tee -a log-install.txt
 sudo hostnamectl set-hostname $username
 echo -e "${green} Script Successfull Installed"
+echo -e "Anda Akan Reboot Selama 5 Detik !"
 sleep 5
 reboot
