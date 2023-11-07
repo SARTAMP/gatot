@@ -362,8 +362,7 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 echo ""
-#install cf
-wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf.sh && chmod +x cf.sh && ./cf.sh
+wget ${REPO}cf.sh && chmod +x cf.sh && ./cf.sh
 clear
 else
 print_install "Random Subdomain/Domain is Used"
