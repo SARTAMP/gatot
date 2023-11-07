@@ -898,7 +898,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget https://raw.githubusercontent.com/SARTAMP/gatot/main/menu/menu.zip
+    wget ${REPO}menu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -1004,6 +1004,7 @@ clear
     base_package
     make_folder_xray
     pasang_domain
+    password_default
     pasang_ssl
     install_xray
     ssh
@@ -1021,7 +1022,6 @@ clear
     menu
     profile
     enable_services
-    password_default
 }
 function password_default() {
 domain=$(cat /etc/xray/domain)
