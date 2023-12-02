@@ -1,6 +1,5 @@
 #!/bin/bash
 # Edition : Stable Edition V3.0
-# Auther  : MyridWan Project
 # (C) Copyright 2023
 # =========================================
 #!/bin/bash
@@ -49,13 +48,13 @@ ns_domain_cloudflare1() {
 apt install jq curl -y
 clear
 
-read -rp "Sub Domain (Contoh: Rzy): " sub
-DOMAIN=cloudrzs.my.id
+read -rp "Sub Domain (Contoh: DevsTn): " sub
+DOMAIN=devstun.my.id
 echo $sub > /root/cfku
-SUB_DOMAIN=${sub}.cloudrzs.my.id
-CF_ID=prarizki9@gmail.com
-CF_KEY=8c5d17794ccaee71d0e79e09dae8fb23f3e92
-echo ".cloudrzs.my.id" > /root/domain
+SUB_DOMAIN=${sub}.devstun.my.id
+CF_ID=cocresult1@gmail.com
+CF_KEY=8b69a018ff18da71e5d8297e720e14cb38286
+echo ".devstun.my.id" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
 set -euo pipefail
@@ -116,3 +115,4 @@ notif_addhost
 echo -e "Done Record Domain= ${SUB_DOMAIN} For VPS"
 sleep 1
 }
+pointing
